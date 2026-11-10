@@ -16,11 +16,18 @@ app.include_router(book1, prefix="/book")
 
 from fastapi import Request
 
+from pathlib import Path
+
 from fastapi.staticfiles import StaticFiles
-app.mount("../static", StaticFiles(directory="static"), name="static")
+
+# 以文件位置为基准，避免依赖启动时的工作目录
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+app.mount("/static", StaticFiles(directory=BASE_DIR / "static"), name="static")
 
 from fastapi.templating import Jinja2Templates
-template = Jinja2Templates("../templates")
+
+template = Jinja2Templates(directory=str(BASE_DIR / "templates"))
 
 from tortoise.contrib.fastapi import register_tortoise
 from settings import TORTOISE_ORM
