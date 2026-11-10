@@ -16,3 +16,6 @@ __pycache__/
 # 本地配置（含数据库密码，不入库；模板见 app/settings.example.py）
 app/settings.py
 
+# 工作区记忆/本地文件
+.workbuddy/
+
