@@ -1,0 +1,18 @@
+.venv/
+.env
+__pycache__/
+*.pyc
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# 数据库/日志
+*.sqlite3
+*.db
+*.log
+
+# 本地配置（含数据库密码，不入库；模板见 app/settings.example.py）
+app/settings.py
+
