@@ -1,4 +1,4 @@
 fastapi[standard]==0.124.4
-SQLAlchemy==2.0.44
+tortoise-orm==1.1.8
+aerich==0.10.1
 PyMySQL[rsa]==1.1.2
-pydantic-settings==2.12.0
