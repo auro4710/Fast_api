@@ -1,4 +1,8 @@
 fastapi[standard]==0.124.4
 SQLAlchemy==2.0.44
-PyMySQL[rsa]==1.1.2
 pydantic-settings==2.12.0
+PyMySQL[rsa]==1.1.2
+
+# 旧实现（app/fast01.py）仍在用，迁移到 SQLAlchemy 后可移除
+tortoise-orm==1.1.8
+aerich==0.10.1
